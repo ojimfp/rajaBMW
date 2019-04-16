@@ -40,6 +40,15 @@ Route::get('receivable', function () {
 Route::get('payable', function () {
    return view('payable');
 });
+Route::get('total_cust', function () {
+   return view('total_cust');
+});
+Route::get('clv', function () {
+   return view('clv');
+});
+Route::get('conversion_rate', function () {
+   return view('conversion_rate');
+});
 Route::view('/examples/plugin-helper', 'examples.plugin_helper');
 Route::view('/examples/plugin-init', 'examples.plugin_init');
 Route::view('/examples/blank', 'examples.blank');

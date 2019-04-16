@@ -96,11 +96,11 @@ $dm->main_nav                   = array(
         'sub'   => array(
             array(
                 'name'  => 'Total Customer',
-                'url'   => 'be_ui_icons.php'
+                'url'   => 'total_cust'
             ),
             array(
-                'name'  => 'Customer Lifetime Value',
-                'url'   => 'be_ui_grid.php'
+                'name'  => 'Average Customer Lifetime Value',
+                'url'   => 'clv'
             )
         )
     ),
@@ -110,7 +110,7 @@ $dm->main_nav                   = array(
         'sub'   => array(
             array(
                 'name'  => 'Conversion Rate',
-                'url'   => 'be_forms_elements.php'
+                'url'   => 'conversion_rate'
             )
         )
     ),
