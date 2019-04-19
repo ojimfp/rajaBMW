@@ -119,16 +119,16 @@ $dm->main_nav                   = array(
         'icon'  => 'fa fa-heart',
         'sub'   => array(
             array(
-                'name'  => 'Customer Retention',
-                'url'   => 'be_tables_styles.php'
+                'name'  => 'Customer Retention Rate',
+                'url'   => 'cust_retention'
             ),
             array(
-                'name'  => 'Customer Churn',
-                'url'   => 'be_tables_responsive.php'
+                'name'  => 'Customer Churn Rate',
+                'url'   => 'cust_churn'
             ),
             array(
-                'name'  => 'Customer Order Frequency',
-                'url'   => 'be_tables_responsive.php'
+                'name'  => 'Average Customer Order Frequency',
+                'url'   => 'cust_order_freq'
             )
         )
     ),
@@ -137,12 +137,12 @@ $dm->main_nav                   = array(
         'icon'  => 'fa fa-dollar-sign',
         'sub'   => array(
             array(
-                'name'  => 'Customer Order Quantity',
-                'url'   => 'be_forms_elements.php'
+                'name'  => 'Average Customer Order Quantity',
+                'url'   => 'cust_order_quantity'
             ),
             array(
-                'name'  => 'Customer Order Frequency',
-                'url'   => 'be_forms_custom_controls.php'
+                'name'  => 'Average Customer Order Frequency',
+                'url'   => 'cust_order_freq'
             )
         )
     )

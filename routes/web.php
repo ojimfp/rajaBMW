@@ -49,6 +49,18 @@ Route::get('clv', function () {
 Route::get('conversion_rate', function () {
    return view('conversion_rate');
 });
+Route::get('cust_retention', function () {
+   return view('cust_retention');
+});
+Route::get('cust_churn', function () {
+   return view('cust_churn');
+});
+Route::get('cust_order_freq', function () {
+   return view('cust_order_freq');
+});
+Route::get('cust_order_quantity', function () {
+   return view('cust_order_quantity');
+});
 Route::view('/examples/plugin-helper', 'examples.plugin_helper');
 Route::view('/examples/plugin-init', 'examples.plugin_init');
 Route::view('/examples/blank', 'examples.blank');
