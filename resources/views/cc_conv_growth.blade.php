@@ -8,11 +8,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Average Customer Order Frequency</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Conversion Rate Growth</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Customer Loyalty</li>
-                    <li class="breadcrumb-item active" aria-current="page">Average Customer Order Frequency</li>
+                    <li class="breadcrumb-item">Customer Conversion</li>
+                    <li class="breadcrumb-item active" aria-current="page">Conversion Rate Growth</li>
                 </ol>
             </nav>
         </div>
@@ -43,67 +43,15 @@
             </div>
             <!-- END Bars Chart -->
 
-    <!-- Related Charts -->
-    <h2 class="content-heading">Related Charts</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Order Frequency Growth</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-lines"></canvas>
-                    </div>
+            <div class="block block-bordered">
+                <div class="block-content">
+                    <p>From the chart above, we can conclude that...</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Order Frequency by Geography</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Order Frequency per Channel</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Total Customer</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END Related Charts -->
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-      <h6>Customer Loyalty Management</h6>
+      <h6>Conversion Rate Optimization</h6>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -111,7 +59,7 @@
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
           deserunt mollit anim id est laborum.</p>
-      <h6>Customer Loyalty Program Framework</h6>
+      <h6>Micro-moment Marketing</h6>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -124,11 +72,56 @@
     <!-- Source Link -->
     <h2 class="content-heading">Source Link</h2>
     <div>
-      <a href="http://businessoverbroadway.com/2013/01/30/customer-loyalty-measurement-framework/">Dummy Link 1</a>
-      <a href="http://www.crmsearch.com/loyalty-software.php">Dummy Link 2</a>
+      <a href="https://moz.com/learn/seo/conversion-rate-optimization">Dummy Link 1</a>
+      <a href="https://uxdesign.cc/a-look-at-googles-micro-moments-and-how-to-make-use-of-them-9aa13c874dd1">Dummy Link 2</a>
     </div>
     <!-- END Source Link -->
 
+    <!-- Related Charts -->
+    <h2 class="content-heading">Related Charts</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cc_conv_rate">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Conversion Rate</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cc_conv_geo">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Conversion Rate by Geography</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cc_conv_channel">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Conversion Rate per Channel</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cp_total_cust">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Total Customer</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- END Related Charts -->
 </div>
 <!-- END Page Content -->
 

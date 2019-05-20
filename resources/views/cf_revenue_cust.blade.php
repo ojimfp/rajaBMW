@@ -8,11 +8,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Average Account Payable</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Average Revenue per Customer</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Dashboard</li>
-                    <li class="breadcrumb-item active" aria-current="page">Average Account Payable</li>
+                    <li class="breadcrumb-item">Cost & Financial</li>
+                    <li class="breadcrumb-item active" aria-current="page">Average Revenue per Customer</li>
                 </ol>
             </nav>
         </div>
@@ -43,28 +43,15 @@
             </div>
             <!-- END Bars Chart -->
 
-    <!-- Related Charts -->
-    <h2 class="content-heading">Related Charts</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Account Payable Turnover Rate</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
+            <div class="block block-bordered">
+                <div class="block-content">
+                    <p>From the chart above, we can conclude that...</p>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- END Related Charts -->
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-    <h5>Improving Financial Manager (AP)</h5>
+    <h5>Market Segmentation</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -76,9 +63,64 @@
 
     <!-- Source Link -->
     <h2 class="content-heading">Source Link</h2>
-      <a href="https://www.accountingtools.com/articles/2017/5/5/accounts-receivable-turnover-ratio">Dummy Link</a>
+      <a href="https://www.marketingtutor.net/market-segmentation-levels-strategies-examples/">Dummy Link</a>
     <!-- END Source Link -->
 
+    <!-- Related Charts -->
+    <h2 class="content-heading">Related Charts</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cf_revenue">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Revenue</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cf_revenue_growth">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Revenue Growth</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cf_revenue_geo">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Revenue by Geography</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cf_revenue_channel">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Average Revenue per Channel</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cf_aov">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Average Order Value</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- END Related Charts -->
 </div>
 <!-- END Page Content -->
 

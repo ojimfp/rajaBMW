@@ -8,11 +8,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Cost of Goods Sold</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Average Order Value by Geography</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">Cost & Financial</li>
-                    <li class="breadcrumb-item active" aria-current="page">Cost of Goods Sold</li>
+                    <li class="breadcrumb-item active" aria-current="page">Average Order Value by Geography</li>
                 </ol>
             </nav>
         </div>
@@ -43,41 +43,15 @@
             </div>
             <!-- END Bars Chart -->
 
-    <!-- Related Charts -->
-    <h2 class="content-heading">Related Charts</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Product Sold</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
+            <div class="block block-bordered">
+                <div class="block-content">
+                    <p>From the chart above, we can conclude that...</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Net Profit</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END Related Charts -->
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-    <h5>Buying in Bulk</h5>
+    <h5>Market Basket Analysis / Affinity Analysis</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -85,31 +59,7 @@
         reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
         deserunt mollit anim id est laborum.</p>
-    <h5>Materials Substitution</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.</p>
-    <h5>Leverage Suppliers</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.</p>
-    <h5>Automation</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum.</p>
-    <h5>Moving Manufacturing Offshore</h5>
+    <h5>Cross-selling & Up-selling</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -121,9 +71,55 @@
 
     <!-- Source Link -->
     <h2 class="content-heading">Source Link</h2>
-      <a href="https://www.unleashedsoftware.com/blog/five-effective-ways-reduce-cost-goods-sold">Dummy Link</a>
+      <a href="https://webfocusinfocenter.informationbuilders.com/wfappent/TLs/TL_rstat/source/marketbasket49.htm">Dummy Link 1</a>
+      <a href="https://www.bigcommerce.com/ecommerce-answers/what-difference-between-upselling-and-cross-selling/">Dummy Link 2</a>
     <!-- END Source Link -->
 
+    <!-- Related Charts -->
+    <h2 class="content-heading">Related Charts</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cf_aov">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Average Order Value</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cf_aov_growth">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Average Order Value Growth</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cf_aov_channel">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Average Order Value per Channel</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cf_revenue">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Revenue</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- END Related Charts -->
 </div>
 <!-- END Page Content -->
 

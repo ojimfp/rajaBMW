@@ -8,11 +8,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Conversion Rate</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Conversion Rate by Geography</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">Customer Conversion</li>
-                    <li class="breadcrumb-item active" aria-current="page">Conversion Rate</li>
+                    <li class="breadcrumb-item active" aria-current="page">Conversion Rate by Geography</li>
                 </ol>
             </nav>
         </div>
@@ -43,63 +43,11 @@
             </div>
             <!-- END Bars Chart -->
 
-    <!-- Related Charts -->
-    <h2 class="content-heading">Related Charts</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Conversion Rate Growth</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-lines"></canvas>
-                    </div>
+            <div class="block block-bordered">
+                <div class="block-content">
+                    <p>From the chart above, we can conclude that...</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Conversion Rate by Geography</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Average Conversion Rate per Channel</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Total Customer</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END Related Charts -->
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
@@ -129,6 +77,51 @@
     </div>
     <!-- END Source Link -->
 
+    <!-- Related Charts -->
+    <h2 class="content-heading">Related Charts</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cc_conv_rate">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Conversion Rate</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cc_conv_growth">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Conversion Rate Growth</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cc_conv_channel">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Conversion Rate per Channel</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="cp_total_cust">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Total Customer</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- END Related Charts -->
 </div>
 <!-- END Page Content -->
 

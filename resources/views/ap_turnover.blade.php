@@ -8,11 +8,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Average Customer Lifetime Value</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Account Payable Turnover Rate</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Customer Profitability</li>
-                    <li class="breadcrumb-item active" aria-current="page">Average Customer Lifetime Value</li>
+                    <li class="breadcrumb-item">Dashboard</li>
+                    <li class="breadcrumb-item active" aria-current="page">Account Payable Turnover Rate</li>
                 </ol>
             </nav>
         </div>
@@ -27,7 +27,7 @@
     <!-- Bars Chart -->
             <div class="block block-rounded block-bordered">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Bar Chart</h3>
+                    <h3 class="block-title">Bars</h3>
                     <div class="block-options">
                         <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
                             <i class="si si-refresh"></i>
@@ -51,40 +51,28 @@
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-      <h6>One-to-one Marketing</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
-      <h6>Developing Predictive Analytics</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
+    <h5>Improving Financial Manager (AP)</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.</p>
     <!-- END Recommended Strategy -->
 
     <!-- Source Link -->
     <h2 class="content-heading">Source Link</h2>
-    <div>
-      <a href="https://marketbusinessnews.com/financial-glossary/one-to-one-marketing-definition-meaning/">Dummy Link 1</a>
-      <a href="https://www.marketing91.com/one-one-marketing-personalized-marketing/">Dummy Link 2</a>
-      <a href="https://www.datasciencecentral.com/profiles/blogs/predictive-analytics-strategy">Dummy Link 3</a>
-    </div>
+      <a href="https://www.accountingtools.com/articles/2017/5/5/accounts-receivable-turnover-ratio">Dummy Link</a>
     <!-- END Source Link -->
 
     <!-- Related Charts -->
     <h2 class="content-heading">Related Charts</h2>
     <div class="row">
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cp_total_cust">
+            <a class="block block-rounded block-link-shadow" href="ap_average">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Total Customer</h3>
+                    <h3 class="block-title">Average Account Payable</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
