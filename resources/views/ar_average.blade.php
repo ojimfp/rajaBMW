@@ -8,11 +8,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Customer Retention Rate</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Average Account Receivable</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Customer Loyalty</li>
-                    <li class="breadcrumb-item active" aria-current="page">Customer Retention Rate</li>
+                    <li class="breadcrumb-item">Dashboard</li>
+                    <li class="breadcrumb-item active" aria-current="page">Average Account Receivable</li>
                 </ol>
             </nav>
         </div>
@@ -27,7 +27,7 @@
     <!-- Bars Chart -->
             <div class="block block-rounded block-bordered">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Bar Chart</h3>
+                    <h3 class="block-title">Bars</h3>
                     <div class="block-options">
                         <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
                             <i class="si si-refresh"></i>
@@ -43,58 +43,44 @@
             </div>
             <!-- END Bars Chart -->
 
-    <!-- Related Charts -->
-    <h2 class="content-heading">Related Charts</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Churn Rate</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
+            <div class="block block-bordered">
+                <div class="block-content">
+                    <p>From the chart above, we can conclude that...</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Total Customer</h3>
-                </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END Related Charts -->
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-      <h6>Customer Segmentation Using RFM Method</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
+    <h5>Improving Financial Manager (AR)</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.</p>
     <!-- END Recommended Strategy -->
 
     <!-- Source Link -->
     <h2 class="content-heading">Source Link</h2>
-    <div>
-      <a href="http://www.marketingmo.com/strategic-planning/customer-retention-strategy/">Dummy Link 1</a>
-      <a href="https://www.putler.com/rfm-analysis/">Dummy Link 2</a>
-    </div>
+      <a href="https://www.accountingtools.com/articles/2017/5/5/accounts-receivable-turnover-ratio">Dummy Link</a>
     <!-- END Source Link -->
 
+    <!-- Related Charts -->
+    <h2 class="content-heading">Related Charts</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="ar_turnover">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Account Receivable Turnover Rate</h3>
+                </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- END Related Charts -->
 </div>
 <!-- END Page Content -->
 
