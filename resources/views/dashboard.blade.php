@@ -4,6 +4,8 @@
 <?php require 'inc/_global/views/head_end.php'; ?>
 <?php require 'inc/_global/views/page_start.php'; ?>
 
+<?php $dm->get_css('css/themes/xwork.min.css'); ?>
+
 <!-- Hero -->
 <div class="bg-image" style="background-image: url('<?php echo $dm->assets_folder; ?>/media/various/bmw.jpg');">
     <div class="bg-white-90">
@@ -537,5 +539,7 @@
 
 <!-- Page JS Helpers (jQuery Sparkline plugin) -->
 <script>jQuery(function(){ Dashmix.helpers('sparkline'); });</script>
+
+<script>jQuery(function(){ Dashmix.layout('sidebar_style_dark'); });</script>
 
 <?php require 'inc/_global/views/footer_end.php'; ?>

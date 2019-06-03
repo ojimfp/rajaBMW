@@ -6,8 +6,16 @@
 <?php $dm->get_css('js/plugins/slick-carousel/slick.css'); ?>
 <?php $dm->get_css('js/plugins/slick-carousel/slick-theme.css'); ?>
 
+<!-- Page JS Plugins -->
+<?php $dm->get_js('js/plugins/easy-pie-chart/jquery.easypiechart.min.js'); ?>
+<?php $dm->get_js('js/plugins/jquery-sparkline/jquery.sparkline.min.js'); ?>
+<?php $dm->get_js('js/plugins/chart.js/Chart.bundle.min.js'); ?>
+<?php $dm->get_js('js/plugins/slick-carousel/slick.min.js'); ?>
+
 <?php require 'inc/_global/views/head_end.php'; ?>
 <?php require 'inc/_global/views/page_start.php'; ?>
+
+<?php $dm->get_css('css/themes/xwork.min.css'); ?>
 
 <!-- Hero -->
 <div class="bg-body-light">
@@ -43,7 +51,7 @@
                 <div class="block-content block-content-full text-center">
                     <div class="py-3">
                         <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
+                        <canvas id="myChart" height="150"></canvas>
                     </div>
                 </div>
             </div>
@@ -135,6 +143,42 @@
 <?php require 'inc/_global/views/page_end.php'; ?>
 <?php require 'inc/_global/views/footer_start.php'; ?>
 
+<!-- Chart Logic -->
+<script>
+var url = "{{url('chart')}}";
+var Names = [];
+var Quantity = [];
+$(document).ready(function() {
+  $.get(url, function(response) {
+     response.forEach(function(data) {
+         Names.push(data.Product_Name);
+         Quantity.push(data.Product_QoH);
+     });
+     var ctx = document.getElementById('myChart').getContext('2d');
+         var myChart = new Chart(ctx, {
+           type: 'bar',
+           data: {
+               labels: Names,
+               datasets: [{
+                   label: 'Product Sold',
+                   data: Quantity,
+                   borderWidth: 1
+               }]
+           },
+           options: {
+               scales: {
+                   yAxes: [{
+                       ticks: {
+                           beginAtZero:true
+                       }
+                   }]
+               }
+           }
+       });
+    });
+ });
+</script>
+
 <!-- Page JS Plugins -->
 <?php $dm->get_js('js/plugins/easy-pie-chart/jquery.easypiechart.min.js'); ?>
 <?php $dm->get_js('js/plugins/jquery-sparkline/jquery.sparkline.min.js'); ?>
@@ -149,5 +193,8 @@
 
 <!-- Page JS Helpers (Slick Slider Plugin) -->
 <script>jQuery(function(){ Dashmix.helpers('slick'); });</script>
+
+<!-- Dark Sidebar -->
+<script>jQuery(function(){ Dashmix.layout('sidebar_style_dark'); });</script>
 
 <?php require 'inc/_global/views/footer_end.php'; ?>

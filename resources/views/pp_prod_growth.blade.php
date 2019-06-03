@@ -9,6 +9,8 @@
 <?php require 'inc/_global/views/head_end.php'; ?>
 <?php require 'inc/_global/views/page_start.php'; ?>
 
+<?php $dm->get_css('css/themes/xwork.min.css'); ?>
+
 <!-- Hero -->
 <div class="bg-body-light">
     <div class="content content-full">
@@ -149,5 +151,7 @@
 
 <!-- Page JS Helpers (Slick Slider Plugin) -->
 <script>jQuery(function(){ Dashmix.helpers('slick'); });</script>
+
+<script>jQuery(function(){ Dashmix.layout('sidebar_style_dark'); });</script>
 
 <?php require 'inc/_global/views/footer_end.php'; ?>
