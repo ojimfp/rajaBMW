@@ -13,9 +13,12 @@
 
 // Example Routes
 Route::view('/', 'landing');
-Route::match(['get', 'post'], '/dashboard', function(){
-    return view('dashboard');
-});
+// Route::match(['get', 'post'], '/dashboard', function(){
+//     return view('dashboard');
+// });
+Route::get('dashboard','HomeController@dashboard');
+
+Route::get('chart', 'HomeController@chart');
 
 Route::get('pp_menu', function () {
    return view('pp_menu');
