@@ -146,23 +146,27 @@
 <!-- Chart Logic -->
 <script>
 var url = "{{url('chart')}}";
-var Names = [];
-var Quantity = [];
+var ProdID = [];
+var OrderQty = [];
 $(document).ready(function() {
   $.get(url, function(response) {
      response.forEach(function(data) {
-         Names.push(data.Product_Name);
-         Quantity.push(data.Product_QoH);
+         ProdID.push(data.Product_ID);
+         OrderQty.push(data.OrderQuantity);
      });
      var ctx = document.getElementById('myChart').getContext('2d');
          var myChart = new Chart(ctx, {
            type: 'bar',
            data: {
-               labels: Names,
+               labels: ProdID,
                datasets: [{
                    label: 'Product Sold',
-                   data: Quantity,
-                   borderWidth: 1
+                   data: OrderQty,
+                   borderWidth: 1,
+                   backgroundColor: 'rgba(32, 93, 191, 0.75)',
+                   // borderColor: 'rgba(200, 200, 200, 0.75)',
+                   // hoverBackgroundColor: 'rgba(200, 200, 200, 1)',
+                   hoverBorderColor: 'rgba(0, 0, 0, 2)'
                }]
            },
            options: {

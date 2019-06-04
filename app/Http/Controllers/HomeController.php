@@ -13,11 +13,13 @@ class HomeController extends Controller
 
       public function chart()
       {
-
-        $result = \DB::table('dim_product')
-                    ->take(10)
+          $result = \DB::table('fact_order')
+                    ->selectRaw('SUM(Order_Quantity) as OrderQuantity, Product_ID')
+                    ->groupBy('Product_ID')
+                    ->orderBy('OrderQuantity', 'DESC')
+                    ->take(8)
                     ->get();
 
-        return response()->json($result);
+          return response()->json($result);
       }
 }
