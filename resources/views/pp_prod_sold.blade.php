@@ -145,7 +145,7 @@
 
 <!-- Chart Logic -->
 <script>
-var url = "{{url('chart')}}";
+var url = "{{url('chartProdSold')}}";
 var ProdID = [];
 var OrderQty = [];
 $(document).ready(function() {

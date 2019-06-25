@@ -10,11 +10,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Customer Order Quantity per Channel</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Customer by Geography</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Customer Spend</li>
-                    <li class="breadcrumb-item active" aria-current="page">Customer Order Quantity per Channel</li>
+                    <li class="breadcrumb-item">Customer Profitability</li>
+                    <li class="breadcrumb-item active" aria-current="page">Customer by Geography</li>
                 </ol>
             </nav>
         </div>
@@ -39,7 +39,8 @@
                 <div class="block-content block-content-full text-center">
                     <div class="py-3">
                         <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
+                        <div id="myChart" height="150"></div>
+                        <?= \Lava::render("GeoChart","Customer by Location","myChart"); ?>
                     </div>
                 </div>
             </div>
@@ -47,45 +48,39 @@
 
             <div class="block block-bordered">
                 <div class="block-content">
-                    <p>From the chart above, we can conclude that...</p>
+                    <p><strong>From the chart above, we can conclude that:</strong><br>
+                    Location with <strong>HIGHEST CUSTOMER COUNT</strong> in 2017 is ..., followed by ..., ...,
+                    and .... Among all locations, only these 4 locations are green-colored. It indicates that other
+                    locations are having difficulties selling products, caused by: low product awareness, high shipping
+                    cost, etc. Maintain these green-colored locations to generate more buying customers, also, improve
+                    other low-customers locations by implementing strategies related to <strong>CUSTOMER COUNT</strong>
+                    on certain location such as: local marketing, customer acquisition, customer retention, etc.</p>
                 </div>
             </div>
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-      <h6>Market Basket Analysis</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
-      <h6>Cross-selling & Up-selling</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
+    <h6>Local Marketing</h6>
+        <p>A strategy to increase buying customers by optimizing your website or other channels to increase more
+        traffic and brand awareness in a certain location.
+        (<a href="https://www.bigcommerce.com/blog/local-marketing">Read more...</a>)</p>
+    <h6>Customer Acquisiton Strategy</h6>
+        <p>A strategy to acquire more new buying customers rather than to maintain existing customers. If your
+        company sells high value products but have a low purchase frequency, you should consider this strategy.
+        (<a href="https://www.pixlee.com/blog/3-new-trends-in-retail-customer-acquisition/">Read more...</a>)</p>
+      <h6>Customer Retention Strategy</h6>
+        <p>A strategy to maintain existing customers to keep buying from your company. If your company sells
+        low value products but have a high purchase frequency, this strategy might help a lot.
+        (<a href="https://www.shopify.com/blog/customer-retention-strategies">Read more...</a>)</p>
     <!-- END Recommended Strategy -->
-
-    <!-- Source Link -->
-    <h2 class="content-heading">Source Link</h2>
-    <div>
-      <a href="https://webfocusinfocenter.informationbuilders.com/wfappent/TLs/TL_rstat/source/marketbasket49.htm">Dummy Link 1</a>
-      <a href="https://www.bigcommerce.com/ecommerce-answers/what-difference-between-upselling-and-cross-selling/">Dummy Link 2</a>
-    </div>
-    <!-- END Source Link -->
 
     <!-- Related Charts -->
     <h2 class="content-heading">Related Charts</h2>
     <div class="row">
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cs_coq">
+            <a class="block block-rounded block-link-shadow" href="cp_cust_growth">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Order Quantity</h3>
+                    <h3 class="block-title">Customer Growth</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
@@ -93,9 +88,9 @@
             </a>
         </div>
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cs_coq_growth">
+            <a class="block block-rounded block-link-shadow" href="cp_cust_channel">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Order Quantity Growth</h3>
+                    <h3 class="block-title">Customer by Channel</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
@@ -103,19 +98,9 @@
             </a>
         </div>
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cs_coq_geo">
+            <a class="block block-rounded block-link-shadow" href="cp_cust_category">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Order Quantity by Geography</h3>
-                </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-                </div>
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cp_total_cust">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Total Customer</h3>
+                    <h3 class="block-title">Customer by Category</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">

@@ -10,11 +10,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Customer Churn Rate</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Average Order Frequency by Location</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">Customer Loyalty</li>
-                    <li class="breadcrumb-item active" aria-current="page">Customer Churn Rate</li>
+                    <li class="breadcrumb-item active" aria-current="page">Average Order Frequency by Location</li>
                 </ol>
             </nav>
         </div>
@@ -29,7 +29,7 @@
     <!-- Bars Chart -->
             <div class="block block-rounded block-bordered">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Bar Chart</h3>
+                    <h3 class="block-title">Geo Chart</h3>
                     <div class="block-options">
                         <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
                             <i class="si si-refresh"></i>
@@ -47,71 +47,52 @@
 
             <div class="block block-bordered">
                 <div class="block-content">
-                    <p>From the chart above, we can conclude that...</p>
+                <p><strong>From the chart above, we can conclude that:</strong><br>
+                    Location with <strong>HIGHEST AVERAGE CUSTOMER ORDER FREQUENCY</strong> in 2017 is ...
+                    followed by ... and .... Maintain these green-colored locations to generate more frequently
+                    buying customers, also, improve other red-colored or low order frequency locations by
+                    implementing strategies related to improving <strong>ORDER FREQUENCY</strong> on certain
+                    location such as: local marketing, customer retention, etc.</p>
                 </div>
             </div>
+
+    <!-- Recommended Strategy -->
+    <h2 class="content-heading">Recommended Strategy</h2>
+        <h6>Local Marketing</h6>
+            <p>A strategy to increase buying customers by optimizing your website or other channels to increase more
+            traffic and brand awareness in a certain location.
+            (<a href="https://www.bigcommerce.com/blog/local-marketing">Read more...</a>)</p>
+        <h6>Customer Retention Strategy</h6>
+            <p>A strategy to maintain existing customers to keep buying from your company. If your company sells
+            low value products but have a high purchase frequency, this strategy might help a lot.
+            (<a href="https://www.shopify.com/blog/customer-retention-strategies">Read more...</a>)</p>
+    <!-- END Recommended Strategy -->
 
     <!-- Related Charts -->
     <h2 class="content-heading">Related Charts</h2>
     <div class="row">
         <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
+            <a class="block block-rounded block-link-shadow" href="aof_growth">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Retention Rate</h3>
+                    <h3 class="block-title">Average Order Frequency Growth</h3>
                 </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
                 </div>
-            </div>
+            </a>
         </div>
         <div class="col-md-6">
-            <div class="block block-rounded block-bordered">
+            <a class="block block-rounded block-link-shadow" href="aof_channel">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Total Customer</h3>
+                    <h3 class="block-title">Average Order Frequency by Channel</h3>
                 </div>
-                <div class="block-content block-content-full text-center">
-                    <div class="py-3">
-                        <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
-                    </div>
+                <div class="block-content">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
                 </div>
-            </div>
+            </a>
         </div>
     </div>
     <!-- END Related Charts -->
-
-    <!-- Recommended Strategy -->
-    <h2 class="content-heading">Recommended Strategy</h2>
-      <h6>Reducing Customer Churn</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
-      <h6>Turning Customer into Advocate</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
-    <!-- END Recommended Strategy -->
-
-    <!-- Source Link -->
-    <h2 class="content-heading">Source Link</h2>
-    <div>
-      <a href="https://acquire.io/blog/reduce-customer-churn-rate/">Dummy Link 1</a>
-      <a href="https://www.bain.com/insights/breaking-the-back-of-customer-churn/">Dummy Link 2</a>
-      <a href="https://acodez.in/convert-your-customer-into-brand-advocates/">Dummy Link 3</a>
-    </div>
-    <!-- END Source Link -->
-
 </div>
 <!-- END Page Content -->
 

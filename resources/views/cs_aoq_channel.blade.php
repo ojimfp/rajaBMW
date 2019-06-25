@@ -10,11 +10,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Average Conversion Rate per Channel</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Average Order Quantity by Channel</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Customer Conversion</li>
-                    <li class="breadcrumb-item active" aria-current="page">Average Conversion Rate per Channel</li>
+                    <li class="breadcrumb-item">Customer Spend</li>
+                    <li class="breadcrumb-item active" aria-current="page">Average Order Quantity by Channel</li>
                 </ol>
             </nav>
         </div>
@@ -39,7 +39,7 @@
                 <div class="block-content block-content-full text-center">
                     <div class="py-3">
                         <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
+                        <canvas id="myChart" height="150"></canvas>
                     </div>
                 </div>
             </div>
@@ -47,45 +47,33 @@
 
             <div class="block block-bordered">
                 <div class="block-content">
-                    <p>From the chart above, we can conclude that...</p>
+                    <p><strong>From the chart above, we can conclude that:</strong><br>
+                    In 2017, most customers are buying through ... channel, rather than buying through ... channel.
+                    Among all Online channel, customers preferred ... to buy products. Since your customers
+                    preferred Online channel, your company should implement <strong>E-COMMERCE ADVERTISING</strong>
+                    or other <strong>ONLINE ADVERTISING</strong> such as: Facebook Ads, Instagram Ads, and other
+                    e-commerce ads (eg: Tokopedia, Bukalapak, etc.) to maintain and increase buying customers
+                    through Online channel.</p>
                 </div>
             </div>
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-      <h6>Conversion Rate Optimization</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
-      <h6>Micro-moment Marketing</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
+        <h6>E-Commerce Marketing/Advertising</h6>
+            <p>A strategy to increase buying customers using e-commerce and online campaign.
+            (<a href="https://www.digitalmarketer.com/blog/ecommerce-advertising/">Read more...</a>)</p>
+        <h6>Online Advertising</h6>
+            <p>A way to reach your customer through social media or e-commerce, for example: Facebook Ads.
+            (<a href="https://neilpatel.com/blog/copy-paste-guide-how-to-drive-a-flood-of-ecommerce-sales-using-facebook-ads/">Read more...</a>)</p>
     <!-- END Recommended Strategy -->
-
-    <!-- Source Link -->
-    <h2 class="content-heading">Source Link</h2>
-    <div>
-      <a href="https://moz.com/learn/seo/conversion-rate-optimization">Dummy Link 1</a>
-      <a href="https://uxdesign.cc/a-look-at-googles-micro-moments-and-how-to-make-use-of-them-9aa13c874dd1">Dummy Link 2</a>
-    </div>
-    <!-- END Source Link -->
 
     <!-- Related Charts -->
     <h2 class="content-heading">Related Charts</h2>
     <div class="row">
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cc_conv_rate">
+            <a class="block block-rounded block-link-shadow" href="cs_aoq_growth">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Conversion Rate</h3>
+                    <h3 class="block-title">Average Order Quantity Growth</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
@@ -93,29 +81,9 @@
             </a>
         </div>
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cc_conv_growth">
+            <a class="block block-rounded block-link-shadow" href="cs_aoq_loc">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Conversion Rate Growth</h3>
-                </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-                </div>
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cc_conv_geo">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Conversion Rate by Geography</h3>
-                </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-                </div>
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cp_total_cust">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Total Customer</h3>
+                    <h3 class="block-title">Average Order Quantity by Location</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
@@ -129,6 +97,49 @@
 
 <?php require 'inc/_global/views/page_end.php'; ?>
 <?php require 'inc/_global/views/footer_start.php'; ?>
+
+<!-- Chart Logic -->
+<script>
+var url = "{{url('chartCOQChan')}}";
+var ChanName = [];
+var Aoq = [];
+$(document).ready(function() {
+  $.get(url, function(response) {
+     response.forEach(function(data) {
+         ChanName.push(data.Channel_Name);
+         Aoq.push(data.AvgOQ);
+     });
+     var ctx = document.getElementById('myChart').getContext('2d');
+         var myChart = new Chart(ctx, {
+           type: 'horizontalBar',
+           data: {
+               labels: ChanName,
+               datasets: [{
+                   label: 'Average Order Quantity',
+                   data: Aoq,
+                   backgroundColor: ['#fff587', '#ff665a', '#7d6b7d'],
+                   // borderWidth: 5,
+                   // borderColor: '#fcee23',
+                   // pointRadius: 5,
+                   // pointBorderColor: '#000000',
+                   // pointBackgroundColor: '#000000',
+                   // pointStyle: 'rectRot',
+                   // fill: false
+               }]
+           },
+           options: {
+               scales: {
+                   yAxes: [{
+                       ticks: {
+                           beginAtZero: true
+                       }
+                   }]
+               }
+           }
+       });
+    });
+ });
+</script>
 
 <!-- Page JS Plugins -->
 <?php $dm->get_js('js/plugins/easy-pie-chart/jquery.easypiechart.min.js'); ?>

@@ -26458,3 +26458,11 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   background: #74b3fb;
   opacity: 0.25;
 }
+
+.retention1 {
+  position: relative;
+}
+
+.retention2 {
+  position: absolute;
+}

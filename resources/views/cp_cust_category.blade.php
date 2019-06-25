@@ -48,23 +48,29 @@
             <div class="block block-bordered">
                 <div class="block-content">
                     <p><strong>From the chart above, we can conclude that:</strong><br>
-                      The number of customers increased from 2015 to 2017, each year growth rate also reached
-                      your assigned target ... . You can maintain and improve this achievement by implementing
-                      strategy related to <strong>CUSTOMER COUNT</strong> such as: local marketing, customer
-                      acquisition, customer retention, etc.</p>
+                    Your company lost more than ... customers through 2015 and 2016, and only about ... customers
+                    are your regulars. In 2017, you acquired more than ... new customers, use this chance to turn
+                    them into loyal customers and prevent them from leaving by creating customer programs, for
+                    example: <strong>LOYALTY PROGRAM, REFERRAL PROGRAM,</strong> etc.</p>
                 </div>
             </div>
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-      <h6>Customer Acquisiton Strategy</h6>
-        <p>A strategy to acquire more new buying customers rather than to maintain existing customers. If your
-        company sells high value products but have a low purchase frequency, you should consider this strategy.
-        (<a href="https://www.pixlee.com/blog/3-new-trends-in-retail-customer-acquisition/">Read more...</a>)</p>
-      <h6>Customer Retention Strategy</h6>
-        <p>A strategy to maintain existing customers to keep buying from your company. If your company sells
-        low value products but have a high purchase frequency, this strategy might help a lot.
-        (<a href="https://www.shopify.com/blog/customer-retention-strategies">Read more...</a>)</p>
+      <h6>RFM Analysis</h6>
+        <p>A way to create customer segmentation based on buying behavior using three indicators/parameters:
+        <strong>R</strong>ecency, <strong>F</strong>requency, <strong>M</strong>onetary. It groups customer based
+        on their transaction history. How recently, how often, and how much they spend at your company. By making
+        customer segmentation using this method, you can differentiate strategies to win each customer group.
+        (<a href="https://www.putler.com/rfm-analysis/">Read more...</a>)</p>
+      <h6>Customer Loyalty Program</h6>
+        <p>This program is intended to make customer keep buying your product, rather than buying from another
+        competitor.
+        (<a href="https://www.shopify.com/blog/loyalty-program">Read more...</a>)</p>
+        <p><strong>Note:</strong><br>
+        More information regarding ways to reduce customer churn:
+        1 (<a href="https://acquire.io/blog/reduce-customer-churn-rate/">Read more...</a>)
+        2 (<a href="https://www.bain.com/insights/breaking-the-back-of-customer-churn/">Read more...</a>)</p> 
 
     <!-- Related Charts -->
     <h2 class="content-heading">Related Charts</h2>
@@ -80,7 +86,7 @@
             </a>
         </div>
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="custChan">
+            <a class="block block-rounded block-link-shadow" href="cp_cust_channel">
                 <div class="block-header block-header-default">
                     <h3 class="block-title">Customer by Channel</h3>
                 </div>
@@ -108,7 +114,7 @@
 <?php require 'inc/_global/views/footer_start.php';?>
 
 <!-- Chart Logic -->
-<script>
+<!-- <script>
 var url = "{{url('chartTotalCust')}}";
 var CustMonth = [];
 var CustID = [];
@@ -148,7 +154,7 @@ $(document).ready(function() {
        });
     });
  });
-</script>
+</script> -->
 
 <!-- Page JS Plugins -->
 <?php $dm->get_js('js/plugins/easy-pie-chart/jquery.easypiechart.min.js');?>

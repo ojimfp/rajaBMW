@@ -47,38 +47,29 @@
 
             <div class="block block-bordered">
                 <div class="block-content">
-                    <p>From the chart above, we can conclude that...</p>
+                    <p><strong>From the chart above, we can conclude that:</strong><br>
+                    At the end of 2017, customers with <strong>HIGHEST LIFETIME VALUE</strong> are ..., ...,
+                    and ... respectively. Lifetime value represents how much a customer spend (total net profit)
+                    at your company over time. Maintain green-colored customer (high lifetime value) and improve
+                    red-colored customer (low lifetime value) by implementing strategies related to <strong>
+                    CUSTOMER LIFETIME VALUE</strong>, such as: one-to-one marketing, personalization, customization,
+                    etc.</p>
                 </div>
             </div>
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
       <h6>One-to-one Marketing</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
-      <h6>Developing Predictive Analytics</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
+        <p>A strategy to increase customer spend by emphasizing personalized interactions with customers. There
+        are two types of activites in one-to-one marketing: <strong>PERSONALIZATION</strong> is offering
+        personalized product to customers based on their preferences which already been studied before. Personalization
+        relies on customer data such as: purchase history, last purchase date, color preferences, gender, etc. While
+        <strong>CUSTOMIZATION</strong> is giving the customers opportunity to customize their product to their
+        specific requests or preferences. For example: customers can choose their favorite color, size, or any aspect
+        of a product.
+        1 (<a href="https://marketbusinessnews.com/financial-glossary/one-to-one-marketing-definition-meaning/">Read more...</a>)
+        2 (<a href="https://www.marketing91.com/one-one-marketing-personalized-marketing/">Read more...</a>)</p>
     <!-- END Recommended Strategy -->
-
-    <!-- Source Link -->
-    <h2 class="content-heading">Source Link</h2>
-    <div>
-      <a href="https://marketbusinessnews.com/financial-glossary/one-to-one-marketing-definition-meaning/">Dummy Link 1</a>
-      <a href="https://www.marketing91.com/one-one-marketing-personalized-marketing/">Dummy Link 2</a>
-      <a href="https://www.datasciencecentral.com/profiles/blogs/predictive-analytics-strategy">Dummy Link 3</a>
-    </div>
-    <!-- END Source Link -->
 
     <!-- Related Charts -->
     <h2 class="content-heading">Related Charts</h2>

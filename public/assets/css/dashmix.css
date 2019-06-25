@@ -27140,3 +27140,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   background: #74b3fb;
   opacity: .25;
 }
+
+.notif {
+  padding: 1.0rem 0.5rem 0 0.5rem !important;
+}

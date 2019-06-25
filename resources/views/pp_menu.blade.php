@@ -29,7 +29,7 @@
         <div class="col-md-6">
             <a class="block block-rounded block-link-shadow" href="pp_prod_sold">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Product Sold</h3>
+                    <h3 class="block-title">Product Sold per ID</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
@@ -47,9 +47,9 @@
             </a>
         </div>
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="pp_prod_geo">
+            <a class="block block-rounded block-link-shadow" href="pp_prod_loc">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Product Sold by Geography</h3>
+                    <h3 class="block-title">Product Sold by Location</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
@@ -59,17 +59,7 @@
         <div class="col-md-6">
             <a class="block block-rounded block-link-shadow" href="pp_prod_channel">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Product Sold per Channel</h3>
-                </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-                </div>
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="pp_prod_cust">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Product Sold per Customer</h3>
+                    <h3 class="block-title">Product Sold by Channel</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">

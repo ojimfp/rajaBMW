@@ -10,11 +10,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Customer Order Frequency per Channel</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Average Order Frequency Growth</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">Customer Loyalty</li>
-                    <li class="breadcrumb-item active" aria-current="page">Customer Order Frequency per Channel</li>
+                    <li class="breadcrumb-item active" aria-current="page">Average Order Frequency Growth</li>
                 </ol>
             </nav>
         </div>
@@ -29,7 +29,7 @@
     <!-- Bars Chart -->
             <div class="block block-rounded block-bordered">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Bar Chart</h3>
+                    <h3 class="block-title">Line Chart</h3>
                     <div class="block-options">
                         <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
                             <i class="si si-refresh"></i>
@@ -39,7 +39,7 @@
                 <div class="block-content block-content-full text-center">
                     <div class="py-3">
                         <!-- Bars Chart Container -->
-                        <canvas class="js-chartjs-bars"></canvas>
+                        <canvas id="myChart" height="150"></canvas>
                     </div>
                 </div>
             </div>
@@ -47,45 +47,39 @@
 
             <div class="block block-bordered">
                 <div class="block-content">
-                    <p>From the chart above, we can conclude that...</p>
+                    <p><strong>From the chart above, we can conclude that:</strong>
+                    Throughout 2015 to 2017, the <strong>average order frequency per
+                    customer</strong> ... decreased every year. This means, in average,
+                    your customers are buying not more than 1-2 times in a year. Improve
+                    this by implementing strategy related to <strong>ORDER FREQUENCY PER
+                    CUSTOMER</strong> such as: customer retention strategy, customer
+                    loyalty program, etc.</p>
                 </div>
             </div>
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-      <h6>Customer Loyalty Management</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
-      <h6>Customer Loyalty Program Framework</h6>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.</p>
+      <h6>Customer Retention Strategy</h6>
+        <p>A strategy to maintain existing customers to keep buying from your company. If your company sells
+          low value products but have a high purchase frequency, this strategy might help a lot.
+        (<a href="https://www.shopify.com/blog/customer-retention-strategies">Read more...</a>)</p>
+      <h6>Customer Loyalty Strategy</h6>
+        <p>This program is intended to make customer keep buying your product, rather than buying from
+          another competitor.
+        (<a href="https://www.shopify.com/blog/loyalty-program">Read more...</a>)</p>
+        <p><strong>Note:</strong><br>
+        More information regarding ways to increase order frequency:
+        1 (<a href="https://www.growcode.com/blog/purchase-frequency/">Read more...</a>)
+        2 (<a href="http://burkhartmarketing.com/five-ways-to-increase-customer-frequency-and-loyalty/">Read more...</a>)</p> 
     <!-- END Recommended Strategy -->
-
-    <!-- Source Link -->
-    <h2 class="content-heading">Source Link</h2>
-    <div>
-      <a href="http://businessoverbroadway.com/2013/01/30/customer-loyalty-measurement-framework/">Dummy Link 1</a>
-      <a href="http://www.crmsearch.com/loyalty-software.php">Dummy Link 2</a>
-    </div>
-    <!-- END Source Link -->
 
     <!-- Related Charts -->
     <h2 class="content-heading">Related Charts</h2>
     <div class="row">
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cof">
+            <a class="block block-rounded block-link-shadow" href="aof_loc">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Order Frequency</h3>
+                    <h3 class="block-title">Average Order Frequency by Location</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
@@ -93,29 +87,9 @@
             </a>
         </div>
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cof_growth">
+            <a class="block block-rounded block-link-shadow" href="aof_channel">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Order Frequency Growth</h3>
-                </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-                </div>
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cof_geo">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer Order Frequency by Geography</h3>
-                </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-                </div>
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cp_total_cust">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Total Customer</h3>
+                    <h3 class="block-title">Average Order Frequency by Channel</h3>
                 </div>
                 <div class="block-content">
                     <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
@@ -129,6 +103,49 @@
 
 <?php require 'inc/_global/views/page_end.php'; ?>
 <?php require 'inc/_global/views/footer_start.php'; ?>
+
+<!-- Chart Logic -->
+<script>
+var url = "{{url('chartAOF')}}";
+var CustMonth = [];
+var AOF = [];
+$(document).ready(function() {
+  $.get(url, function(response) {
+     response.forEach(function(data) {
+         CustMonth.push(data.Month);
+         AOF.push(data.AvgOF);
+     });
+     var ctx = document.getElementById('myChart').getContext('2d');
+         var myChart = new Chart(ctx, {
+           type: 'line',
+           data: {
+               labels: CustMonth,
+               datasets: [{
+                   label: 'Average Order Frequency',
+                   data: AOF,
+                   backgroundColor: '#fcee23',
+                   borderWidth: 5,
+                   borderColor: '#fcee23',
+                   pointRadius: 5,
+                   pointBorderColor: '#000000',
+                   pointBackgroundColor: '#000000',
+                   pointStyle: 'rectRot',
+                   fill: false
+               }]
+           },
+           options: {
+               scales: {
+                   yAxes: [{
+                       ticks: {
+                           beginAtZero: true
+                       }
+                   }]
+               }
+           }
+       });
+    });
+ });
+</script>
 
 <!-- Page JS Plugins -->
 <?php $dm->get_js('js/plugins/easy-pie-chart/jquery.easypiechart.min.js'); ?>

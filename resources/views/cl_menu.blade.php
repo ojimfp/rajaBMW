@@ -28,7 +28,7 @@
     <!-- <h2 class="content-heading">Related Charts</h2> -->
     <div class="row">
       <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="cl_cust_retention">
+          <a class="block block-rounded block-link-shadow" href="cp_cust_category">
               <div class="block-header block-header-default">
                   <h3 class="block-title">Customer Retention Rate</h3>
               </div>
@@ -38,7 +38,7 @@
           </a>
       </div>
       <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="cl_cust_churn">
+          <a class="block block-rounded block-link-shadow" href="cp_cust_category">
               <div class="block-header block-header-default">
                   <h3 class="block-title">Customer Churn Rate</h3>
               </div>
@@ -48,9 +48,9 @@
           </a>
       </div>
       <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="cof">
+          <a class="block block-rounded block-link-shadow" href="aof_growth">
               <div class="block-header block-header-default">
-                  <h3 class="block-title">Average Customer Order Frequency</h3>
+                  <h3 class="block-title">Average Order Frequency Growth</h3>
               </div>
               <div class="block-content">
                   <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
@@ -58,9 +58,9 @@
           </a>
       </div>
       <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="cof_growth">
+          <a class="block block-rounded block-link-shadow" href="aof_loc">
               <div class="block-header block-header-default">
-                  <h3 class="block-title">Customer Order Frequency Growth</h3>
+                  <h3 class="block-title">Average Order Frequency by Location</h3>
               </div>
               <div class="block-content">
                   <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
@@ -68,19 +68,9 @@
           </a>
       </div>
       <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="cof_geo">
+          <a class="block block-rounded block-link-shadow" href="aof_channel">
               <div class="block-header block-header-default">
-                  <h3 class="block-title">Customer Order Frequency by Geography</h3>
-              </div>
-              <div class="block-content">
-                  <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-              </div>
-          </a>
-      </div>
-      <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="cof_channel">
-              <div class="block-header block-header-default">
-                  <h3 class="block-title">Customer Order Frequency per Channel</h3>
+                  <h3 class="block-title">Average Order Frequency by Channel</h3>
               </div>
               <div class="block-content">
                   <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
