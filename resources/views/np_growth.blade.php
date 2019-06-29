@@ -10,11 +10,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Customer Growth Rate</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Net Profit Growth</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Customer Profitability</li>
-                    <li class="breadcrumb-item active" aria-current="page">Customer Growth Rate</li>
+                    <li class="breadcrumb-item">Net Profit</li>
+                    <li class="breadcrumb-item active" aria-current="page">Net Profit Growth</li>
                 </ol>
             </nav>
         </div>
@@ -48,60 +48,59 @@
             <div class="block block-bordered">
                 <div class="block-content">
                     <p><strong>From the chart above, we can conclude that:</strong><br>
-                    Your company lost more than ... customers through 2015 and 2016, and only about ... customers
-                    are your regulars. In 2017, you acquired more than ... new customers, use this chance to turn
-                    them into loyal customers and prevent them from leaving by creating customer programs, for
-                    example: <strong>LOYALTY PROGRAM, REFERRAL PROGRAM,</strong> etc.</p>
+                    Net profit increased by <span style="color:#3dca60">20-100%</span> through 2015 to 2017.
+                    You can maintain and improve this achievement by implementing strategy related to <strong>
+                    NET PROFIT GROWTH</strong>.
+                    </p>
                 </div>
             </div>
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-      <h6>RFM Analysis</h6>
-        <p>A way to create customer segmentation based on buying behavior using three indicators/parameters:
-        <strong>R</strong>ecency, <strong>F</strong>requency, <strong>M</strong>onetary. It groups customer based
-        on their transaction history. How recently, how often, and how much they spend at your company. By making
-        customer segmentation using this method, you can differentiate strategies to win each customer group.
-        (<a href="https://www.putler.com/rfm-analysis/">Read more...</a>)</p>
-      <h6>Customer Loyalty Program</h6>
-        <p>This program is intended to make customer keep buying your product, rather than buying from another
-        competitor.
-        (<a href="https://www.shopify.com/blog/loyalty-program">Read more...</a>)</p>
-        <p><strong>Note:</strong><br>
-        More information regarding ways to reduce customer churn:
-        1 (<a href="https://acquire.io/blog/reduce-customer-churn-rate/">Read more...</a>)
-        2 (<a href="https://www.bain.com/insights/breaking-the-back-of-customer-churn/">Read more...</a>)</p> 
+      <h6>Customer Acquisiton Strategy</h6>
+        <p>A strategy to acquire more new buying customers rather than to maintain existing customers. If your
+        company sells high value products but have a low purchase frequency, you should consider this strategy.
+        (<a href="https://www.pixlee.com/blog/3-new-trends-in-retail-customer-acquisition/">Read more...</a>)</p>
+      <h6>Customer Retention Strategy</h6>
+        <p>A strategy to maintain existing customers to keep buying from your company. If your company sells
+        low value products but have a high purchase frequency, this strategy might help a lot.
+        (<a href="https://www.shopify.com/blog/customer-retention-strategies">Read more...</a>)</p>
+      <p>Which to focus on, ACQUISITION or RETENTION?
+      (<a href="https://www.invespcro.com/blog/customer-acquisition-retention/">Read more...</a>)
+      It also depends on what kind of products your company sells. Pay attention to your products' value and its
+      purchase frequency.
+      (<a href="https://en.promorepublic.com/wp-content/uploads/2016/10/image8-20.png">Read more...</a>)</p>
+      <h6>Dynamic Pricing</h6>
+        <p>Changing product prices based on certain conditions such as demands, product costs, or your competitor's
+        prices.
+        (<a href="https://medium.com/swlh/the-advantages-and-disadvantages-of-dynamic-pricing-c2d914fe644f">Read more...</a>)</p>
+      <p>Creating more value to customers using additional material or contents such as videos, webinar,
+      infographics, etc. Also, business process automation might help to improve customer satisfaction.
+      (<a href="https://blog.adext.com/digital-marketing-strategies-increase-online-sales/">Read more...</a>)</p>
+      <p><strong>Note:</strong><br>
+      More strategies to improve revenue growth.
+      (<a href="https://chiefexecutive.net/three-strategies-for-revenue-growth/">Read more...</a>)</p>
 
     <!-- Related Charts -->
     <h2 class="content-heading">Related Charts</h2>
     <div class="row">
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cp_cust_loc">
+            <a class="block block-rounded block-link-shadow" href="np_loc">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer by Location</h3>
+                    <h3 class="block-title">Net Profit by Location</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/global.png">
                 </div>
             </a>
         </div>
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cp_cust_channel">
+            <a class="block block-rounded block-link-shadow" href="np_channel">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer by Channel</h3>
+                    <h3 class="block-title">Net Profit by Channel</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-                </div>
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cp_cust_category">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer by Category</h3>
-                </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/pie-chart.png">
                 </div>
             </a>
         </div>
@@ -114,24 +113,24 @@
 <?php require 'inc/_global/views/footer_start.php';?>
 
 <!-- Chart Logic -->
-<!-- <script>
-var url = "{{url('chartTotalCust')}}";
-var CustMonth = [];
-var CustID = [];
+<script>
+var url = "{{url('chartNetGrow')}}";
+var NetYear = [];
+var NetGrow = [];
 $(document).ready(function() {
   $.get(url, function(response) {
      response.forEach(function(data) {
-         CustMonth.push(data.Month);
-         CustID.push(data.CustomerID);
+         NetYear.push(data.Year);
+         NetGrow.push(data.net_grow);
      });
      var ctx = document.getElementById('myChart').getContext('2d');
          var myChart = new Chart(ctx, {
            type: 'line',
            data: {
-               labels: CustMonth,
+               labels: NetYear,
                datasets: [{
-                   label: 'Total Customer',
-                   data: CustID,
+                   label: 'Net Profit Growth',
+                   data: NetGrow,
                    backgroundColor: '#fcee23',
                    borderWidth: 5,
                    borderColor: '#fcee23',
@@ -154,7 +153,7 @@ $(document).ready(function() {
        });
     });
  });
-</script> -->
+</script>
 
 <!-- Page JS Plugins -->
 <?php $dm->get_js('js/plugins/easy-pie-chart/jquery.easypiechart.min.js');?>

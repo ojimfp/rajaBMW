@@ -4,7 +4,6 @@
 <?php require 'inc/_global/views/head_end.php';?>
 <?php require 'inc/_global/views/page_start.php';?>
 
-<?php $dm->get_css('css/dashmix.css');?>
 <?php $dm->get_css('css/themes/xwork.min.css');?>
 
 <!-- Hero -->
@@ -51,20 +50,8 @@
                         <h3 class="block-title">Product Sold Growth</h3>
                     </div>
                     <div class="block-content">
-                        <div>
-                        <!-- Sparkline Dashboard Sales Container -->
-                            <span class="js-sparkline" data-type="line"
-                                                        data-points="[68,25,36,62,59,80,75,89]"
-                                                        data-width="150px"
-                                                        data-height="105px"
-                                                        data-line-color="#343a40"
-                                                        data-fill-color="transparent"
-                                                        data-spot-color="transparent"
-                                                        data-min-spot-color="transparent"
-                                                        data-max-spot-color="transparent"
-                                                        data-highlight-spot-color="#343a40"
-                                                        data-highlight-line-color="#343a40"
-                                                        data-tooltip-suffix="Sales"></span>
+                        <div class="block-content text-center">
+                            <img src="<?php echo $dm->assets_folder; ?>/media/charts/line-chart.png">
                         </div>
                     </div>
                 </div>
@@ -82,7 +69,7 @@
                                 <i class="fa fa-fw fa-exclamation-circle"></i></button>
                             </div>
                             <div class="flex-fill ml-3">
-                                <p class="mb-0"><a class="alert-link" href="pp_prod_growth">See what happened</a></p>
+                                <p class="mb-0"><a class="alert-link" href="ps_main">See what happened</a></p>
                             </div>
                         </div>
                     </div>
@@ -107,20 +94,8 @@
                         <h3 class="block-title">Net Profit Growth</h3>
                     </div>
                     <div class="block-content">
-                        <div>
-                        <!-- Sparkline Dashboard Sales Container -->
-                            <span class="js-sparkline" data-type="line"
-                                                        data-points="[68,25,36,62,59,80,75,89]"
-                                                        data-width="150px"
-                                                        data-height="105px"
-                                                        data-line-color="#343a40"
-                                                        data-fill-color="transparent"
-                                                        data-spot-color="transparent"
-                                                        data-min-spot-color="transparent"
-                                                        data-max-spot-color="transparent"
-                                                        data-highlight-spot-color="#343a40"
-                                                        data-highlight-line-color="#343a40"
-                                                        data-tooltip-suffix="Sales"></span>
+                        <div class="block-content text-center">
+                            <img src="<?php echo $dm->assets_folder; ?>/media/charts/bars-chart.png">
                         </div>
                     </div>
                 </div>
@@ -139,7 +114,7 @@
                                 <i class="fa fa-fw fa-exclamation-circle"></i></button>
                             </div>
                             <div class="flex-fill ml-3">
-                                <p class="mb-0"><a class="alert-link" href="cf_np_growth">See what happened</a></p>
+                                <p class="mb-0"><a class="alert-link" href="np_growth">See what happened</a></p>
                             </div>
                         </div>
                     </div>
@@ -164,20 +139,8 @@
                         <h3 class="block-title">Margin Growth</h3>
                     </div>
                     <div class="block-content">
-                        <div>
-                        <!-- Sparkline Dashboard Sales Container -->
-                            <span class="js-sparkline" data-type="line"
-                                                        data-points="[68,25,36,62,59,80,75,89]"
-                                                        data-width="150px"
-                                                        data-height="105px"
-                                                        data-line-color="#343a40"
-                                                        data-fill-color="transparent"
-                                                        data-spot-color="transparent"
-                                                        data-min-spot-color="transparent"
-                                                        data-max-spot-color="transparent"
-                                                        data-highlight-spot-color="#343a40"
-                                                        data-highlight-line-color="#343a40"
-                                                        data-tooltip-suffix="Sales"></span>
+                        <div class="block-content text-center">
+                            <img src="<?php echo $dm->assets_folder; ?>/media/charts/bars-chart.png">
                         </div>
                     </div>
                 </div>
@@ -195,7 +158,7 @@
                                 <i class="fa fa-fw fa-exclamation-circle"></i></button>
                             </div>
                             <div class="flex-fill ml-3">
-                                <p class="mb-0"><a class="alert-link" href="cf_margin_growth">See what happened</a></p>
+                                <p class="mb-0"><a class="alert-link" href="mr_growth">See what happened</a></p>
                             </div>
                         </div>
                     </div>
@@ -220,20 +183,8 @@
                         <h3 class="block-title">AOV Growth</h3>
                     </div>
                     <div class="block-content">
-                        <div>
-                        <!-- Sparkline Dashboard Sales Container -->
-                            <span class="js-sparkline" data-type="line"
-                                                        data-points="[68,25,36,62,59,80,75,89]"
-                                                        data-width="150px"
-                                                        data-height="105px"
-                                                        data-line-color="#343a40"
-                                                        data-fill-color="transparent"
-                                                        data-spot-color="transparent"
-                                                        data-min-spot-color="transparent"
-                                                        data-max-spot-color="transparent"
-                                                        data-highlight-spot-color="#343a40"
-                                                        data-highlight-line-color="#343a40"
-                                                        data-tooltip-suffix="Sales"></span>
+                        <div class="block-content text-center">
+                            <img src="<?php echo $dm->assets_folder; ?>/media/charts/bars-chart.png">
                         </div>
                     </div>
                 </div>
@@ -251,7 +202,7 @@
                                 <i class="fa fa-fw fa-exclamation-circle"></i></button>
                             </div>
                             <div class="flex-fill ml-3">
-                                <p class="mb-0"><a class="alert-link" href="cf_aov_growth">See what happened</a></p>
+                                <p class="mb-0"><a class="alert-link" href="aov_growth">See what happened</a></p>
                             </div>
                         </div>
                     </div>
@@ -265,7 +216,8 @@
         <div class="col-sm-3">
             <div class="block block-rounded block-bordered">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Total Customer</h3>
+                    <h3 class="block-title">Total<br>
+                    Customer</h3>
                 </div>
                 <div class="block-content">
                     @foreach($totalCust as $tc)
@@ -280,20 +232,8 @@
                         <h3 class="block-title">Customer Growth</h3>
                     </div>
                     <div class="block-content">
-                        <div>
-                        <!-- Sparkline Dashboard Sales Container -->
-                            <span class="js-sparkline" data-type="line"
-                                                        data-points="[68,25,36,62,59,80,75,89]"
-                                                        data-width="150px"
-                                                        data-height="105px"
-                                                        data-line-color="#343a40"
-                                                        data-fill-color="transparent"
-                                                        data-spot-color="transparent"
-                                                        data-min-spot-color="transparent"
-                                                        data-max-spot-color="transparent"
-                                                        data-highlight-spot-color="#343a40"
-                                                        data-highlight-line-color="#343a40"
-                                                        data-tooltip-suffix="Sales"></span>
+                        <div class="block-content text-center">
+                            <img src="<?php echo $dm->assets_folder; ?>/media/charts/line-chart.png">
                         </div>
                     </div>
                 </div>
@@ -311,7 +251,7 @@
                                 <i class="fa fa-fw fa-exclamation-circle"></i></button>
                             </div>
                             <div class="flex-fill ml-3">
-                                <p class="mb-0"><a class="alert-link" href="cp_cust_growth">Target reached!</a></p>
+                                <p class="mb-0"><a class="alert-link" href="cust_growth">Target reached!</a></p>
                             </div>
                         </div>
                     </div>
@@ -336,20 +276,8 @@
                         <h3 class="block-title">AOQ Growth</h3>
                     </div>
                     <div class="block-content">
-                        <div>
-                        <!-- Sparkline Dashboard Sales Container -->
-                            <span class="js-sparkline" data-type="line"
-                                                        data-points="[68,25,36,62,59,80,75,89]"
-                                                        data-width="150px"
-                                                        data-height="105px"
-                                                        data-line-color="#343a40"
-                                                        data-fill-color="transparent"
-                                                        data-spot-color="transparent"
-                                                        data-min-spot-color="transparent"
-                                                        data-max-spot-color="transparent"
-                                                        data-highlight-spot-color="#343a40"
-                                                        data-highlight-line-color="#343a40"
-                                                        data-tooltip-suffix="Sales"></span>
+                        <div class="block-content text-center">
+                            <img src="<?php echo $dm->assets_folder; ?>/media/charts/line-chart.png">
                         </div>
                     </div>
                 </div>
@@ -367,7 +295,7 @@
                                 <i class="fa fa-fw fa-exclamation-circle"></i></button>
                             </div>
                             <div class="flex-fill ml-3">
-                                <p class="mb-0"><a class="alert-link" href="cs_aoq_growth">See what happened</a></p>
+                                <p class="mb-0"><a class="alert-link" href="aoq_growth">See what happened</a></p>
                             </div>
                         </div>
                     </div>
@@ -392,20 +320,8 @@
                         <h3 class="block-title">AOF Growth</h3>
                     </div>
                     <div class="block-content">
-                        <div>
-                        <!-- Sparkline Dashboard Sales Container -->
-                            <span class="js-sparkline" data-type="line"
-                                                        data-points="[68,25,36,62,59,80,75,89]"
-                                                        data-width="150px"
-                                                        data-height="105px"
-                                                        data-line-color="#343a40"
-                                                        data-fill-color="transparent"
-                                                        data-spot-color="transparent"
-                                                        data-min-spot-color="transparent"
-                                                        data-max-spot-color="transparent"
-                                                        data-highlight-spot-color="#343a40"
-                                                        data-highlight-line-color="#343a40"
-                                                        data-tooltip-suffix="Sales"></span>
+                        <div class="block-content text-center">
+                            <img src="<?php echo $dm->assets_folder; ?>/media/charts/line-chart.png">
                         </div>
                     </div>
                 </div>
@@ -436,29 +352,18 @@
                     <h3 class="block-title">Average Customer Lifetime Value</h3>
                 </div>
                 <div class="block-content">
-                    <p class="font-size-h3 font-w300 mb-0 text-center">
-                        +350
+                    <p class="font-size-h2 font-w300 mb-0 text-center">
+                    350+
                     </p>
+                    <p class="text-info text-center">IDR per Customer</p>  
                 </div>
                 <div class="block block-rounded">
                     <div class="block-header block-header-default">
                         <h3 class="block-title">CLV Growth</h3>
                     </div>
                     <div class="block-content">
-                        <div>
-                        <!-- Sparkline Dashboard Sales Container -->
-                            <span class="js-sparkline" data-type="line"
-                                                        data-points="[68,25,36,62,59,80,75,89]"
-                                                        data-width="150px"
-                                                        data-height="105px"
-                                                        data-line-color="#343a40"
-                                                        data-fill-color="transparent"
-                                                        data-spot-color="transparent"
-                                                        data-min-spot-color="transparent"
-                                                        data-max-spot-color="transparent"
-                                                        data-highlight-spot-color="#343a40"
-                                                        data-highlight-line-color="#343a40"
-                                                        data-tooltip-suffix="Sales"></span>
+                        <div class="block-content text-center">
+                            <img src="<?php echo $dm->assets_folder; ?>/media/charts/bars-chart.png">
                         </div>
                     </div>
                 </div>
@@ -490,9 +395,11 @@
                     <h3 class="block-title">Customer Retention</h3>
                 </div>
                 <div class="block-content">
+                    @foreach($retention as $ret)
                     <p class="font-size-h2 font-w300 mb-0 text-center">
-                        350+
+                        {{$ret->reten}}
                     </p>
+                    @endforeach
                     <p class="text-info text-center">Loyal & Returning Customer</p>  
                 </div>
                 <div class="block block-rounded">
@@ -500,20 +407,8 @@
                         <h3 class="block-title">Customer Retention Growth</h3>
                     </div>
                     <div class="block-content">
-                        <div>
-                        <!-- Sparkline Dashboard Sales Container -->
-                            <span class="js-sparkline" data-type="line"
-                                                        data-points="[68,25,36,62,59,80,75,89]"
-                                                        data-width="150px"
-                                                        data-height="105px"
-                                                        data-line-color="#343a40"
-                                                        data-fill-color="transparent"
-                                                        data-spot-color="transparent"
-                                                        data-min-spot-color="transparent"
-                                                        data-max-spot-color="transparent"
-                                                        data-highlight-spot-color="#343a40"
-                                                        data-highlight-line-color="#343a40"
-                                                        data-tooltip-suffix="Sales"></span>
+                        <div class="block-content text-center">
+                            <img src="<?php echo $dm->assets_folder; ?>/media/charts/bars-chart.png">
                         </div>
                     </div>
                 </div>
@@ -544,29 +439,19 @@
                     <h3 class="block-title">Customer Churn</h3>
                 </div>
                 <div class="block-content">
-                    <p class="font-size-h3 font-w300 mb-0 text-center">
-                        +350
+                <p class="font-size-h2 font-w300 mb-0 text-center">
+                    350+
                     </p>
+                    <p class="text-info text-center">Lost<br>
+                    Customer</p>  
                 </div>
                 <div class="block block-rounded">
                     <div class="block-header block-header-default">
                         <h3 class="block-title">Customer Churn Growth</h3>
                     </div>
                     <div class="block-content">
-                        <div>
-                        <!-- Sparkline Dashboard Sales Container -->
-                            <span class="js-sparkline" data-type="line"
-                                                        data-points="[68,25,36,62,59,80,75,89]"
-                                                        data-width="150px"
-                                                        data-height="105px"
-                                                        data-line-color="#343a40"
-                                                        data-fill-color="transparent"
-                                                        data-spot-color="transparent"
-                                                        data-min-spot-color="transparent"
-                                                        data-max-spot-color="transparent"
-                                                        data-highlight-spot-color="#343a40"
-                                                        data-highlight-line-color="#343a40"
-                                                        data-tooltip-suffix="Sales"></span>
+                        <div class="block-content text-center">
+                            <img src="<?php echo $dm->assets_folder; ?>/media/charts/bars-chart.png">
                         </div>
                     </div>
                 </div>

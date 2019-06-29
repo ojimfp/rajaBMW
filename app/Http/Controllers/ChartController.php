@@ -7,27 +7,15 @@ use Khill\Lavacharts\Lavacharts;
 
 class ChartController extends Controller
 {
-    public function chartProdSold()
-    {
-        $result = \DB::table('fact_order')
-            ->selectRaw('SUM(Order_Quantity) as OrderQuantity, Product_ID')
-            ->groupBy('Product_ID')
-            ->orderBy('OrderQuantity', 'DESC')
-            ->take(8)
-            ->get();
 
-        return response()->json($result);
-    }
-
-    public function chartTotalCust()
+    public function chartCustGrowth()
     {
         $result = \DB::table('fact_order')
             ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
-            ->selectRaw('COUNT(DISTINCT fact_order.Customer_ID) as CustomerID, dim_date.Month,
-                    dim_date.Year')
-            ->where('dim_date.Year', 2017)
-            ->groupBy('dim_date.Month')
-            ->orderBy('dim_date.Month', 'ASC')
+            ->selectRaw('COUNT(DISTINCT fact_order.Customer_ID) as cust_growth, dim_date.Year')
+            ->whereBetween('dim_date.Year', [2015, 2017])
+            ->groupBy('dim_date.Year')
+            ->orderBy('dim_date.Year', 'ASC')
             ->get();
 
         return response()->json($result);
@@ -100,57 +88,110 @@ class ChartController extends Controller
         return view("cp_cust_loc", compact('chart'));
     }
 
-    public function chartChurn()
+    public function chartCustCat()
+    {
+        $lost = \DB::table('fact_order')
+                // ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
+                ->join('dim_customer', 'fact_order.Customer_ID', '=', 'dim_customer.Customer_ID')
+                ->selectRaw('COUNT(DISTINCT fact_order.Customer_ID) as lost_cust, dim_customer.Customer_Category')
+                ->where('dim_customer.Customer_Category', 'Lost Customer')
+                // ->whereBetween('dim_date.Year', [2015, 2017])
+                // ->orderBy('dim_date.Year', 'ASC')
+                ->get();
+
+        $loyal = \DB::table('fact_order')
+                // ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
+                ->join('dim_customer', 'fact_order.Customer_ID', '=', 'dim_customer.Customer_ID')
+                ->selectRaw('COUNT(DISTINCT fact_order.Customer_ID) as loyal_cust, dim_customer.Customer_Category')
+                ->where('dim_customer.Customer_Category', 'Loyal Customer')
+                // ->whereBetween('dim_date.Year', [2015, 2017])
+                // ->orderBy('dim_date.Year', 'ASC')
+                ->get();
+
+        $new = \DB::table('fact_order')
+                // ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
+                ->join('dim_customer', 'fact_order.Customer_ID', '=', 'dim_customer.Customer_ID')
+                ->selectRaw('COUNT(DISTINCT fact_order.Customer_ID) as new_cust, dim_customer.Customer_Category')
+                ->where('dim_customer.Customer_Category', 'New Customer')
+                // ->whereBetween('dim_date.Year', [2015, 2017])
+                // ->orderBy('dim_date.Year', 'ASC')
+                ->get();
+
+        $return = \DB::table('fact_order')
+                // ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
+                ->join('dim_customer', 'fact_order.Customer_ID', '=', 'dim_customer.Customer_ID')
+                ->selectRaw('COUNT(DISTINCT fact_order.Customer_ID) as return_cust, dim_customer.Customer_Category')
+                ->where('dim_customer.Customer_Category', 'Returning Customer')
+                // ->whereBetween('dim_date.Year', [2015, 2017])
+                // ->orderBy('dim_date.Year', 'ASC')
+                ->get();
+
+        // return view('cp_cust_category', compact('lost', 'loyal', 'new', 'return'));
+        return response()->json([$lost, $loyal, $new, $return]);
+    }
+
+    public function chartAOQGrowth()
+    {
+        $line = \DB::table('fact_order')
+                ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
+                ->selectRaw('ROUND(SUM(fact_order.Order_Quantity)/COUNT(DISTINCT fact_order.Customer_ID), 2) as aoq,
+                dim_date.Year')
+                ->whereBetween('dim_date.Year', [2015, 2017])
+                ->groupBy('dim_date.Year')
+                ->orderBy('dim_date.Year', 'ASC')
+                ->get();
+
+        $bar = \DB::table('fact_order')
+                ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
+                ->selectRaw('SUM(fact_order.Order_Quantity) as sum_oq, COUNT(DISTINCT fact_order.Customer_ID) as count_cust,
+                dim_date.Year')
+                ->whereBetween('dim_date.Year', [2015, 2017])
+                ->groupBy('dim_date.Year')
+                ->orderBy('dim_date.Year', 'ASC')
+                ->get();
+
+        return response()->json([$line, $bar]);
+    }
+
+    public function chartAOQChan()
     {
         $result = \DB::table('fact_order')
-            ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
-            ->join('dim_customer', 'fact_order.Customer_ID', '=', 'dim_customer.Customer_ID')
-            ->selectRaw('COUNT(DISTINCT fact_order.Customer_ID) as CustomerID, dim_customer.Customer_Category,
-                    dim_date.Year')
-            ->whereBetween('dim_date.Year', [2015, 2017])
-            ->groupBy('dim_date.Year')
-            ->orderBy('dim_date.Year', 'ASC')
-            ->get();
+                ->join('dim_channel', 'fact_order.Channel_ID', '=', 'dim_channel.Channel_ID')
+                ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
+                ->selectRaw('ROUND(SUM(fact_order.Order_Quantity)/COUNT(DISTINCT fact_order.Customer_ID), 2) as aoq,
+                        dim_channel.Channel_Name')
+                ->where('dim_date.Year', 2017)
+                ->groupBy('Channel_Name')
+                ->get();
 
         return response()->json($result);
     }
 
-    public function chartCOQChan()
+    public function chartAOFGrowth()
+    {
+        $query = \DB::table('fact_order')
+                ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
+                ->selectRaw('ROUND(COUNT(DISTINCT fact_order.Order_ID)/COUNT(DISTINCT fact_order.Customer_ID)/
+                COUNT(DISTINCT fact_order.Channel_ID), 2) as aof, dim_date.Year')
+                ->whereBetween('dim_date.Year', [2015, 2017])
+                ->groupBy('dim_date.Year')
+                ->orderBy('dim_date.Year', 'ASC')
+                ->get();
+
+        return response()->json($query);
+    }
+
+    public function chartAOFChan()
     {
         $result = \DB::table('fact_order')
-            ->join('dim_channel', 'fact_order.Channel_ID', '=', 'dim_channel.Channel_ID')
-            ->selectRaw('SUM(fact_order.Order_Quantity)/COUNT(DISTINCT fact_order.Customer_ID) as AvgOQ,
-                    dim_channel.Channel_Name')
-            ->groupBy('Channel_Name')
-            ->get();
+                ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
+                ->join('dim_channel', 'fact_order.Channel_ID', '=', 'dim_channel.Channel_ID')
+                ->selectRaw('ROUND(COUNT(DISTINCT fact_order.Order_ID)/COUNT(DISTINCT fact_order.Customer_ID)/
+                COUNT(DISTINCT fact_order.Channel_ID), 2) as aof, dim_channel.Channel_Type')
+                ->where('dim_date.Year', 2017)
+                ->groupBy('Channel_Type')
+                ->get();
 
         return response()->json($result);
     }
-
-    public function chartCOFChan()
-    {
-        $result = \DB::table('fact_order')
-            ->join('dim_channel', 'fact_order.Channel_ID', '=', 'dim_channel.Channel_ID')
-            ->selectRaw('COUNT(DISTINCT fact_order.Order_ID)/COUNT(DISTINCT fact_order.Customer_ID)/COUNT(DISTINCT fact_order.Channel_ID)
-                    as AvgOF, dim_channel.Channel_Type')
-            ->groupBy('Channel_Type')
-            ->get();
-
-        return response()->json($result);
-    }
-
-    public function chartAOF()
-    {
-        $result = \DB::table('fact_order')
-            ->join('dim_date', 'fact_order.Date_ID', '=', 'dim_date.Date_ID')
-            ->selectRaw('COUNT(DISTINCT fact_order.Order_ID)/COUNT(DISTINCT fact_order.Customer_ID) as AvgOF,
-                    dim_date.Month, dim_date.Year')
-            ->where('dim_date.Year', 2017)
-            ->groupBy('dim_date.Month')
-            ->orderBy('dim_date.Month', 'ASC')
-            ->get();
-
-        return response()->json($result);
-    }
-
 }

@@ -13,7 +13,7 @@
             <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Charts</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Product Profitability</li>
+                    <li class="breadcrumb-item">Average Order Value</li>
                     <li class="breadcrumb-item active" aria-current="page">Charts</li>
                 </ol>
             </nav>
@@ -27,42 +27,32 @@
     <!-- Related Charts -->
     <div class="row">
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="pp_prod_sold">
+            <a class="block block-rounded block-link-shadow" href="aov_growth">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Product Sold per ID</h3>
+                    <h3 class="block-title">Average Order Value Growth</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/line-chart.png">
                 </div>
             </a>
         </div>
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="pp_prod_growth">
+            <a class="block block-rounded block-link-shadow" href="aov_loc">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Product Sold Growth</h3>
+                    <h3 class="block-title">Average Order Value by Location</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/global.png">
                 </div>
             </a>
         </div>
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="pp_prod_loc">
+            <a class="block block-rounded block-link-shadow" href="aov_channel">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Product Sold by Location</h3>
+                    <h3 class="block-title">Average Order Value by Channel</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-                </div>
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="pp_prod_channel">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Product Sold by Channel</h3>
-                </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/bars-chart.png">
                 </div>
             </a>
         </div>

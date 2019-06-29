@@ -71,22 +71,22 @@
     <h2 class="content-heading">Related Charts</h2>
     <div class="row">
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="aof_growth">
+            <a class="block block-rounded block-link-shadow" href="AOFGrowth">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Average Order Frequency Growth</h3>
+                    <h3 class="block-title text-center">Average Order Frequency Growth</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/line-chart.png">
                 </div>
             </a>
         </div>
         <div class="col-md-6">
             <a class="block block-rounded block-link-shadow" href="aof_loc">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Average Order Frequency by Location</h3>
+                    <h3 class="block-title text-center">Average Order Frequency by Location</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/global.png">
                 </div>
             </a>
         </div>
@@ -100,14 +100,14 @@
 
 <!-- Chart Logic -->
 <script>
-var url = "{{url('chartCOFChan')}}";
+var url = "{{url('chartAOFChan')}}";
 var ChanType = [];
-var Aof = [];
+var AOF = [];
 $(document).ready(function() {
   $.get(url, function(response) {
      response.forEach(function(data) {
          ChanType.push(data.Channel_Type);
-         Aof.push(data.AvgOF);
+         AOF.push(data.aof);
      });
      var ctx = document.getElementById('myChart').getContext('2d');
          var myChart = new Chart(ctx, {
@@ -116,15 +116,8 @@ $(document).ready(function() {
                labels: ChanType,
                datasets: [{
                    label: 'Average Order Frequency',
-                   data: Aof,
-                   backgroundColor: ['#fff587', '#ff665a'],
-                   // borderWidth: 5,
-                   // borderColor: '#fcee23',
-                   // pointRadius: 5,
-                   // pointBorderColor: '#000000',
-                   // pointBackgroundColor: '#000000',
-                   // pointStyle: 'rectRot',
-                   // fill: false
+                   data: AOF,
+                   backgroundColor: ['#fff587', '#ff8a47'],
                }]
            },
            options: {

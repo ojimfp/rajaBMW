@@ -75,12 +75,32 @@
     <h2 class="content-heading">Related Charts</h2>
     <div class="row">
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cp_total_cust">
+            <a class="block block-rounded block-link-shadow" href="clv_growth">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Total Customer</h3>
+                    <h3 class="block-title">Customer Lifetime Value Growth</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/line-chart.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="clv_loc">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Customer Lifetime Value by Location</h3>
+                </div>
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/global.png">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="block block-rounded block-link-shadow" href="clv_channel">
+                <div class="block-header block-header-default">
+                    <h3 class="block-title">Customer Lifetime Value by Channel</h3>
+                </div>
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/pie-chart.png">
                 </div>
             </a>
         </div>

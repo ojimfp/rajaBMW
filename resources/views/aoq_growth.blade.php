@@ -47,7 +47,7 @@
 
             <div class="block block-bordered">
                 <div class="block-content">
-                    <p><strong>From the chart above, we can conclude that:</strong>
+                    <p><strong>From the chart above, we can conclude that:</strong><br>
                     Throughout 2015 to 2017, even though the <strong>customer count</strong> ... and <strong>order
                     quantity</strong> ... increased, the <strong>average order quantity per customer</strong> decreased
                     every year. This means, in average, your customers are buying not more than 2-3 products in a year.
@@ -81,8 +81,8 @@
                 <div class="block-header block-header-default">
                     <h3 class="block-title">Average Order Quantity by Location</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/global.png">
                 </div>
             </a>
         </div>
@@ -91,8 +91,8 @@
                 <div class="block-header block-header-default">
                     <h3 class="block-title">Average Order Quantity by Channel</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/pie-chart.png">
                 </div>
             </a>
         </div>
@@ -103,6 +103,66 @@
 
 <?php require 'inc/_global/views/page_end.php'; ?>
 <?php require 'inc/_global/views/footer_start.php'; ?>
+
+<!-- Chart Logic -->
+<script>
+var url = "{{url('chartAOQGrowth')}}";
+var CustYear = [];
+var AOQ = [];
+var CountCust = [];
+var OrderQty = [];
+$(document).ready(function() {
+  $.get(url, function(response) {
+     response.forEach(function(data) {
+         CustYear.push(data.Year);
+         AOQ.push(data.aoq);
+         CountCust.push(data.count_cust);
+         OrderQty.push(data.sum_oq);
+     });
+     var ctx = document.getElementById('myChart').getContext('2d');
+         var myChart = new Chart(ctx, {
+           type: 'line',
+           data: {
+               labels: CustYear,
+               datasets: [{
+                   type: 'line',
+                   label: 'Average Order Quantity',
+                   data: AOQ,
+                   backgroundColor: '#fcee23',
+                   borderWidth: 5,
+                   borderColor: '#fcee23',
+                   pointRadius: 5,
+                   pointBorderColor: '#000000',
+                   pointBackgroundColor: '#000000',
+                   pointStyle: 'rectRot',
+                   fill: false
+               },
+               {
+                   type: 'bar',
+                   label: 'Customer Count',
+                   data: CountCust,
+                   backgroundColor: '#fcee23'
+               },
+               {
+                   type: 'bar',
+                   label: 'Order Quantity',
+                   data: OrderQty,
+                   backgroundColor: '#fcee23',
+               }]
+           },
+           options: {
+               scales: {
+                   yAxes: [{
+                       ticks: {
+                           beginAtZero: true
+                       }
+                   }]
+               }
+           }
+       });
+    });
+ });
+</script>
 
 <!-- Page JS Plugins -->
 <?php $dm->get_js('js/plugins/easy-pie-chart/jquery.easypiechart.min.js'); ?>

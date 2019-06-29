@@ -10,11 +10,11 @@
 <div class="bg-body-light">
     <div class="content content-full">
         <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Customer Growth Rate</h1>
+            <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Margin Growth</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Customer Profitability</li>
-                    <li class="breadcrumb-item active" aria-current="page">Customer Growth Rate</li>
+                    <li class="breadcrumb-item">Margin</li>
+                    <li class="breadcrumb-item active" aria-current="page">Margin Growth</li>
                 </ol>
             </nav>
         </div>
@@ -48,54 +48,42 @@
             <div class="block block-bordered">
                 <div class="block-content">
                     <p><strong>From the chart above, we can conclude that:</strong><br>
-                      The number of customers increased from 2015 to 2017, each year growth rate also reached
-                      your assigned target ... . You can maintain and improve this achievement by implementing
-                      strategy related to <strong>CUSTOMER COUNT</strong> such as: local marketing, customer
-                      acquisition, customer retention, etc.</p>
+                    Margin decreased by <span style="color:red">0,2-0,5%</span> through 2015 to 2017.
+                    You can maintain and improve this achievement by implementing strategies related to
+                    <strong>MARGIN GROWTH</strong>.</p>
                 </div>
             </div>
 
     <!-- Recommended Strategy -->
     <h2 class="content-heading">Recommended Strategy</h2>
-      <h6>Customer Acquisiton Strategy</h6>
-        <p>A strategy to acquire more new buying customers rather than to maintain existing customers. If your
-        company sells high value products but have a low purchase frequency, you should consider this strategy.
-        (<a href="https://www.pixlee.com/blog/3-new-trends-in-retail-customer-acquisition/">Read more...</a>)</p>
-      <h6>Customer Retention Strategy</h6>
-        <p>A strategy to maintain existing customers to keep buying from your company. If your company sells
-        low value products but have a high purchase frequency, this strategy might help a lot.
-        (<a href="https://www.shopify.com/blog/customer-retention-strategies">Read more...</a>)</p>
+      <h6>E-Commerce/Digital Marketing</h6>
+        <p>Drive traffic into your online store and turn them into paying customers using social media or the internet.
+        (<a href="https://www.shopify.com/blog/ecommerce-marketing">Read more...</a>)</p>
+      <p>Another tips to increase your margin growth:
+      1 (<a href="https://www.myob.com/nz/blog/10-ways-to-increase-your-profit-margins/">Read more...</a>),
+      2 (<a href="https://www.retaildoc.com/blog/retail-management-tips-15-ways-to-increase-profit-margins-besides-retail-sales-training">Read more...</a>)
+      </p>
 
     <!-- Related Charts -->
     <h2 class="content-heading">Related Charts</h2>
     <div class="row">
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cp_cust_loc">
+            <a class="block block-rounded block-link-shadow" href="mr_loc">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer by Location</h3>
+                    <h3 class="block-title">Margin by Location</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/global.png">
                 </div>
             </a>
         </div>
         <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="custChan">
+            <a class="block block-rounded block-link-shadow" href="mr_channel">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer by Channel</h3>
+                    <h3 class="block-title">Margin by Channel</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-                </div>
-            </a>
-        </div>
-        <div class="col-md-6">
-            <a class="block block-rounded block-link-shadow" href="cp_cust_category">
-                <div class="block-header block-header-default">
-                    <h3 class="block-title">Customer by Category</h3>
-                </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/bars-chart.png">
                 </div>
             </a>
         </div>
@@ -109,23 +97,23 @@
 
 <!-- Chart Logic -->
 <script>
-var url = "{{url('chartTotalCust')}}";
-var CustMonth = [];
-var CustID = [];
+var url = "{{url('chartMrgGrow')}}";
+var MrgYear = [];
+var Mrg = [];
 $(document).ready(function() {
   $.get(url, function(response) {
      response.forEach(function(data) {
-         CustMonth.push(data.Month);
-         CustID.push(data.CustomerID);
+         MrgYear.push(data.Year);
+         Mrg.push(data.margin);
      });
      var ctx = document.getElementById('myChart').getContext('2d');
          var myChart = new Chart(ctx, {
            type: 'line',
            data: {
-               labels: CustMonth,
+               labels: MrgYear,
                datasets: [{
-                   label: 'Total Customer',
-                   data: CustID,
+                   label: 'Margin',
+                   data: Mrg,
                    backgroundColor: '#fcee23',
                    borderWidth: 5,
                    borderColor: '#fcee23',

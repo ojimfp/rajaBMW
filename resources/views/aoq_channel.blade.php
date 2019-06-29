@@ -75,8 +75,8 @@
                 <div class="block-header block-header-default">
                     <h3 class="block-title">Average Order Quantity Growth</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/line-chart.png">
                 </div>
             </a>
         </div>
@@ -85,8 +85,8 @@
                 <div class="block-header block-header-default">
                     <h3 class="block-title">Average Order Quantity by Location</h3>
                 </div>
-                <div class="block-content">
-                    <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+                <div class="block-content text-center">
+                    <img src="<?php echo $dm->assets_folder; ?>/media/charts/global.png">
                 </div>
             </a>
         </div>
@@ -100,14 +100,14 @@
 
 <!-- Chart Logic -->
 <script>
-var url = "{{url('chartCOQChan')}}";
+var url = "{{url('chartAOQChan')}}";
 var ChanName = [];
-var Aoq = [];
+var AOQ = [];
 $(document).ready(function() {
   $.get(url, function(response) {
      response.forEach(function(data) {
          ChanName.push(data.Channel_Name);
-         Aoq.push(data.AvgOQ);
+         AOQ.push(data.aoq);
      });
      var ctx = document.getElementById('myChart').getContext('2d');
          var myChart = new Chart(ctx, {
@@ -116,8 +116,8 @@ $(document).ready(function() {
                labels: ChanName,
                datasets: [{
                    label: 'Average Order Quantity',
-                   data: Aoq,
-                   backgroundColor: ['#fff587', '#ff665a', '#7d6b7d'],
+                   data: AOQ,
+                   backgroundColor: ['#ff665a', '#7d6b7d', '#fff587'],
                    // borderWidth: 5,
                    // borderColor: '#fcee23',
                    // pointRadius: 5,

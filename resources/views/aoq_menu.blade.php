@@ -13,7 +13,7 @@
             <h1 class="flex-sm-fill font-size-h2 font-w400 mt-2 mb-0 mb-sm-2">Charts</h1>
             <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item">Customer Loyalty</li>
+                    <li class="breadcrumb-item">Average Order Quantity</li>
                     <li class="breadcrumb-item active" aria-current="page">Charts</li>
                 </ol>
             </nav>
@@ -28,62 +28,32 @@
     <!-- <h2 class="content-heading">Related Charts</h2> -->
     <div class="row">
       <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="cp_cust_category">
+          <a class="block block-rounded block-link-shadow" href="aoq_growth">
               <div class="block-header block-header-default">
-                  <h3 class="block-title">Customer Retention Rate</h3>
+                  <h3 class="block-title">Average Order Quantity Growth</h3>
               </div>
-              <div class="block-content">
-                  <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+              <div class="block-content text-center">
+                  <img src="<?php echo $dm->assets_folder; ?>/media/charts/line-chart.png">
               </div>
           </a>
       </div>
       <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="cp_cust_category">
+          <a class="block block-rounded block-link-shadow" href="aoq_loc">
               <div class="block-header block-header-default">
-                  <h3 class="block-title">Customer Churn Rate</h3>
+                  <h3 class="block-title">Average Order Quantity by Location</h3>
               </div>
-              <div class="block-content">
-                  <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+              <div class="block-content text-center">
+                  <img src="<?php echo $dm->assets_folder; ?>/media/charts/global.png">
               </div>
           </a>
       </div>
       <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="aof_growth">
+          <a class="block block-rounded block-link-shadow" href="aoq_channel">
               <div class="block-header block-header-default">
-                  <h3 class="block-title">Average Order Frequency Growth</h3>
+                  <h3 class="block-title">Average Order Quantity by Channel</h3>
               </div>
-              <div class="block-content">
-                  <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-              </div>
-          </a>
-      </div>
-      <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="aof_loc">
-              <div class="block-header block-header-default">
-                  <h3 class="block-title">Average Order Frequency by Location</h3>
-              </div>
-              <div class="block-content">
-                  <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-              </div>
-          </a>
-      </div>
-      <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="aof_channel">
-              <div class="block-header block-header-default">
-                  <h3 class="block-title">Average Order Frequency by Channel</h3>
-              </div>
-              <div class="block-content">
-                  <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
-              </div>
-          </a>
-      </div>
-      <div class="col-md-6">
-          <a class="block block-rounded block-link-shadow" href="clv">
-              <div class="block-header block-header-default">
-                  <h3 class="block-title">Average Customer Lifetime Value</h3>
-              </div>
-              <div class="block-content">
-                  <img src="<?php echo $dm->assets_folder; ?>/media/photos/chart_thumbnail.png">
+              <div class="block-content text-center">
+                  <img src="<?php echo $dm->assets_folder; ?>/media/charts/pie-chart.png">
               </div>
           </a>
       </div>

@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="block-content block-content-full text-center">
-            <div class="dd_month" style="padding:10px;display:inline-block">
+              <div class="dd_month" style="padding:10px;display:inline-block">
                 <label>Month</label>
                 <select id="month" name="Month">
                   <option value="all" selected="selected">Select Month</option>
@@ -158,17 +158,6 @@ $(document).ready(function() {
   });
 });
 
-// $('#month').change(function() {
-//     $(document).ready(function() {
-//         $.get(url, function(response) {
-//             response.forEach(function(data) {
-//                 ChanType.push(data.Channel_Type);
-//                 CustID.push(data.CustomerID);
-//             });
-//         myChart.update();
-//         });
-//     });
-// });
 // $('#month').change(function(){
 //    var val = $(this).val();
 //    if(val=={{$month->Date_ID}})

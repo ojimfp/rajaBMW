@@ -38,32 +38,57 @@ $dm->main_nav = array(
         'type' => 'heading',
     ),
     array(
-        'name' => 'Product Profitability',
+        'name' => 'Product Sold',
         'icon' => 'fa fa-box-open',
-        'url' => 'pp_menu',
+        'url' => 'ps_menu',
     ),
     array(
-        'name' => 'Cost & Financial',
+        'name' => 'Net Profit',
         'icon' => 'fa fa-money-bill-wave',
-        'url' => 'cf_menu',
+        'url' => 'np_menu',
+    ),
+    array(
+        'name' => 'Margin',
+        'icon' => 'fa fa-percent',
+        'url' => 'mr_menu',
+    ),
+    array(
+        'name' => 'Average Order Value',
+        'icon' => 'fa fa-money-bill',
+        'url' => 'aov_menu',
     ),
     array(
         'name' => 'Customer',
         'type' => 'heading',
     ),
     array(
-        'name' => 'Customer Profitability',
+        'name' => 'Total Customer',
         'icon' => 'fa fa-user',
-        'url' => 'cp_menu',
+        'url' => 'cust_menu',
     ),
     array(
-        'name' => 'Customer Loyalty',
+        'name' => 'Average Order Quantity',
         'icon' => 'fa fa-heart',
-        'url' => 'cl_menu',
+        'url' => 'aoq_menu',
     ),
     array(
-        'name' => 'Customer Spend',
+        'name' => 'Average Order Frequency',
+        'icon' => 'fa fa-money-check',
+        'url' => 'aof_menu',
+    ),
+    array(
+        'name' => 'Average Customer Lifetime Value',
         'icon' => 'fa fa-dollar-sign',
-        'url' => 'cs_menu',
+        'url' => 'clv_menu',
+    ),
+    array(
+        'name' => 'Customer Retention',
+        'icon' => 'fa fa-user-friends',
+        'url' => 'cust_category',
+    ),
+    array(
+        'name' => 'Customer Churn',
+        'icon' => 'fa fa-user-minus',
+        'url' => 'cust_category',
     ),
 );
